@@ -5,17 +5,25 @@ public class Value {
     public static Value VOID = new Value(new Object());
 
     final Object value;
-
+    
     public Value(Object value) {
         this.value = value;
     }
 
     public Boolean asBoolean() {
-        return (Boolean)value;
+        try{
+            return Boolean.parseBoolean(value.toString());
+        } catch (Exception e){
+            return (Boolean)value;
+        }
     }
 
     public Double asDouble() {
-        return (Double)value;
+        try{
+            return Double.parseDouble(value.toString());
+        } catch (Exception e){
+            return (Double)value;
+        }
     }
 
     public String asString() {
@@ -23,7 +31,17 @@ public class Value {
     }
 
     public boolean isDouble() {
-        return value instanceof Double;
+        try{
+            Double temp = Double.parseDouble(value.toString());
+            if (temp instanceof Double){
+                return true;
+            }
+            else {
+                return false;
+            }
+        } catch (Exception e){
+            return value instanceof Double;
+        }
     }
 
     @Override
