@@ -1,7 +1,8 @@
-README FOR COP4020 - Project 2
-==
-#### Mustafa Mohamed and Kevin Thomas
-___
+## README FOR Pascal Interpreter Implemented in Java
+
+This project utilizes ANTLR to generate a parse tree visited by a Java Base Visitor.
+Pascal instructions are interpreted in Java and output to the command line.
+Implemented features are listed below as well as features that are still being worked on.
 
 To build code, run the following command:
 ```
@@ -12,11 +13,16 @@ To run code, run the following command:
 mvn -q exec:java -Dexec.args="src/main/tests/[name of test file]"
 ```
 
-## Bonus Attempted:
-- None
-
-## Features working:
-- Previous project 1 features
+## Features:
+- program name
+- variable and constant declarations
+- comments
+- basic arithmatic with variables
+- boolean/logical expressions
+- precedence of operators
+- if-then-else, case
+- read and write
+- special math expressions
 - while do and for do loops
 - break and continue
 
@@ -81,3 +87,6 @@ mvn -q exec:java -Dexec.args="src/main/tests/[name of test file]"
                10.0
                15.0
                21.0
+
+### Credit
+This project made in conjunction with: Mustafa Mohamed
